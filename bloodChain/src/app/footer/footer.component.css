@@ -1,0 +1,15 @@
+.footer_set{
+    text-align:center!important;
+    color:white;
+    background-color:#e02f29 !important;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #222328 !important;
+    color: white;
+    text-align: center;
+    /* height:50px; */
+  }

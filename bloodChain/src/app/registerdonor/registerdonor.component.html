@@ -1,0 +1,167 @@
+<div class="container body" style="border:0px solid black">
+  <div class="row padding">
+    <div class="card widthFull">
+  
+      <div class="container">
+        <div class="row padding_title">
+            <h2>Blood Donation Form</h2>
+        </div>
+     
+      <div class="row padding" style="border-bottom:2px solid black!important"></div>   
+      <form [formGroup]="profileForm" class="form-horizontal" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col-lg-12 paddingInfo">
+                <span style="color:blue"><b>Blood Donor Information</b></span>
+              </div>
+            </div>
+            Donor's Name <span class="redColor" style="color:red">* </span>:
+            <div class="row">
+             
+              <div class="col-lg-6 form-group">
+                  <label for="email"></label>
+                  <input type="text" class="form-control" formControlName="donarName" id="email" placeholder="Enter First Name" name="email">
+                  <div class="alert alert-dangerUpd" *ngIf = "profileForm.get('donarName').touched && profileForm.get('donarName').invalid">
+                      <div *ngIf="profileForm.get('donarName').errors.required">Donar First name is required.</div>
+                      <div *ngIf="profileForm.get('donarName').errors.pattern">Only alphabet are accepted.</div>
+                  </div>
+                </div>
+              <div class="col-lg-6 form-group">
+                  <label for="email"></label>
+                  <input type="text" class="form-control" formControlName="donarNameLast" id="email" placeholder="Enter Last Name" name="email">
+                  <div class="alert alert-dangerUpd" *ngIf = "profileForm.get('donarNameLast').touched && profileForm.get('donarNameLast').invalid">
+                      <div *ngIf="profileForm.get('donarNameLast').errors.required">Donar Last name is required.</div>
+                      <div *ngIf="profileForm.get('donarNameLast').errors.pattern">Only alphabet are accepted.</div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-12">
+                    <label for="email">Aadhar No <span class="red" style="color:red">* </span>:</label>
+                    <input type="text" class="form-control" formControlName="donarAaadhar" maxlength="12" id="email" placeholder="Aadhar No" name="email">
+                    <div class="alert alert-dangerUpd" *ngIf = "profileForm.get('donarAaadhar').touched && profileForm.get('donarAaadhar').invalid">
+                        <div *ngIf="profileForm.get('donarAaadhar').errors.required">Aadhar No is required.</div>
+                        <div *ngIf="profileForm.get('donarAaadhar').errors.pattern">Only Numbers are accepted.</div>
+                    </div>
+                  </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-12">
+                    <label for="email">Mobile No <span class="red" style="color:red">* </span>:</label>
+                    <input type="text" class="form-control" formControlName="donarMobileNo" maxlength=10 id="email" placeholder="Mobile No" name="email">
+                    <div class="alert alert-dangerUpd" *ngIf = "profileForm.get('donarMobileNo').touched && profileForm.get('donarMobileNo').invalid">
+                        <div *ngIf="profileForm.get('donarMobileNo').errors.required">Mobile No is required.</div>
+                        <div *ngIf="profileForm.get('donarMobileNo').errors.pattern">Only Numbers are accepted.</div>
+                    </div>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-12">
+                    <label for="age">Age <span class="red" style="color:red">* </span>:</label>
+                    <input type="text" class="form-control" formControlName="donarAge" maxlength="3" id="email" placeholder="Age" name="email">
+                    <div class="alert alert-dangerUpd" *ngIf = "profileForm.get('donarAge').touched && profileForm.get('donarAge').invalid">
+                        <div *ngIf="profileForm.get('donarAge').errors.required">Age is required.</div>
+                        <div *ngIf="profileForm.get('donarAge').errors.pattern">Only Numbers are accepted or Invalid age.</div>
+                    </div>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-12">
+                    <label for="address">Address <span style="color:red" class="red">* </span> :</label>
+                    <input type="text" class="form-control" formControlName="donarAddress" id="email" placeholder="Address" name="email">
+                    <div class="alert alert-dangerUpd" *ngIf = "profileForm.get('donarAddress').touched && profileForm.get('donarAddress').invalid">
+                        <div *ngIf="profileForm.get('donarAddress').errors.required">Address is required.</div>
+                        <!-- <div *ngIf="profileForm.get('donarAddress').errors.pattern">Only Numbers are accepted.</div> -->
+                    </div> 
+                </div>
+            </div>
+           
+
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <input type="text" class="form-control" formControlName="donarAddressLandmark" id="email" placeholder="State" name="email">
+                    <div class="alert alert-dangerUpd" *ngIf = "profileForm.get('donarAddressLandmark').touched && profileForm.get('donarAddressLandmark').invalid">
+                        <div *ngIf="profileForm.get('donarAddressLandmark').errors.required">State is required.</div>
+                        <!-- <div *ngIf="profileForm.get('donarAddressLandmark').errors.pattern">Only Numbers are accepted.</div> -->
+                    </div>
+                </div>
+                <div class="col-lg-6 form-group">
+                    
+                    <input type="text" class="form-control" formControlName="donarAddressPincode" id="email" maxlength="6" placeholder="Pincode" name="email">
+                    <div class="alert alert-dangerUpd" *ngIf = "profileForm.get('donarAddressPincode').touched && profileForm.get('donarAddressPincode').invalid">
+                        <div *ngIf="profileForm.get('donarAddressPincode').errors.required">Pincode is required.</div>
+                        <div *ngIf="profileForm.get('donarAddressPincode').errors.pattern">Only Numbers are accepted.</div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-lg-12">
+                    <label for="address">Blood Type <span style="color:red" class="red">* </span>:</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 form-group">
+                    <select class="col-lg-12" formControlName="donarBloodGroup">
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                      </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-lg-6 col-xl-6 offset-xl-5 submit_btn" >
+                    <button type="submit" class="btn btn-primary" [disabled]="!profileForm.valid">Submit For Blood Donation</button>
+                </div>
+            </div>
+            <!-- <div class="form-group margin-top">
+                <label class="control-label col-sm-2" for="donarNameId">Donar Name :</label>
+                <div class="col-sm-10 col-lg-4 margin-top">
+                  <input type="text" class="form-control margin-top" formControlName="donarName" id="donarNameId" placeholder="Enter Full Name">
+                </div>
+            </div>
+            <div class="form-group">
+                  <label class="control-label col-sm-2" for="donarAddressId">Donar Address :</label>
+                  <div class="col-sm-10 col-lg-4">
+                    <input type="text" class="form-control" formControlName="donarAddress" id="donarAddressId" placeholder="Enter Address">
+                  </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="donarAgeId">Donar Age :</label>
+                <div class="col-sm-10 col-lg-4">
+                  <input type="text" class="form-control" formControlName="donarAge" id="donarAgeId" placeholder="Enter  Age">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="donarAaadharId"> Aadhar No. :</label>
+                <div class="col-sm-10 col-lg-4">
+                  <input type="text" class="form-control" formControlName="donarAaadhar" id="donarAaadharId" placeholder="Enter Aadhar No">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="donorBloodGroupId"> Blood Group :</label>
+                <div class="col-sm-10 col-lg-4">
+                  <input type="text" class="form-control" formControlName="donarBloodGroup" id="donorBloodGroupId" placeholder="Enter BloodGroup">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="donorMobileNoId"> Mobile No :</label>
+                <div class="col-sm-10 col-lg-4">
+                  <input type="text" class="form-control" formControlName="donorMobileNo" id="donorMobileNoId" placeholder="Enter Mobile No">
+                </div>
+            </div>
+          
+            <div class="row">
+                <div class="col-sm-12 col-lg-offset-3 col-lg-6">
+                    <button type="submit" class="btn btn-primary" [disabled]="!profileForm.valid">Register</button>
+                </div>
+            </div> -->
+      </form>
+    </div>
+  </div>
+  </div>
+</div>

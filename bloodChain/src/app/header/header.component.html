@@ -1,0 +1,26 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark themeColor">
+    <a class="navbar-brand" href="#">BloodChain</a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <!-- <a class="nav-link" [routerLink]="['/viewdonor']">BloodBank</a> -->
+          <select class="nav-link" style="border:1px solid white!important;background-color:white!important">
+            <option>BloodBank</option>
+            <option [routerLink]="['/viewdonor']">Registered Donor's</option>
+            <option [routerLink]="['/viewrequest']">Blood Request</option>
+          </select>
+      </li>
+      <li>
+        <a class="nav-link" [routerLink]="['/register']">Register Donor</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/request']">Hospital</a>
+      </li>
+      <li class="nav-item" >
+          <a class="nav-link" [routerLink]="['/signup']">Sign Up</a>
+      </li>
+      <li class="nav-item" style="float:right;">
+          <a class="nav-link" [routerLink]="['/login']">Login</a>
+      </li>
+    </ul>
+</nav>

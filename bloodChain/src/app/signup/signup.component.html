@@ -1,0 +1,45 @@
+<div class="container" style="border:0px solid black">
+    <div class="row offset-lg-4">
+      <div class="card padding_center">
+        <div class="container">  
+          <div class="row">
+                <div class="col-lg-12 paddingInfo" align="center">
+                  <h2><b>SIGN UP</b></h2>
+                </div>
+          </div>
+        <form [formGroup]="profileForm" class="form-horizontal" (ngSubmit)="onSubmit()">
+              <div class="row">
+                  <div class="form-group">
+                      <label for="email">User Name <span class="red" style="color:red">* </span>:</label>
+                      <input type="text" class="form-control" formControlName="username" id="email" placeholder="User Name" name="email">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="form-group">
+                      <label for="email">Email Id <span class="red" style="color:red">* </span>:</label>
+                      <input type="email" class="form-control" formControlName="emailId" id="email" placeholder="Email Id" name="email">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="form-group">
+                      <label for="age">Password <span class="red" style="color:red">* </span>:</label>
+                      <input type="password" class="form-control" formControlName="ppassword" id="email" placeholder="Password" name="email">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="form-group">
+                      <label for="address">Confirm Password <span style="color:red" class="red">* </span> :</label> 
+                      <input type="password" class="form-control" formControlName="cpassword" id="email" placeholder="Confirm Password" name="email">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12 col-lg-6 offset-lg-3 col-xl-12  submit_btn" >
+                      <button type="submit" class="btn btn_color" [disabled]="!profileForm.valid">Sign Up !!</button>
+                  </div>
+              </div>
+        </form>
+      </div>
+    </div>
+    </div>
+  </div>
+  

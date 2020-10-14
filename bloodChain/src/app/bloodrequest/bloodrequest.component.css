@@ -1,0 +1,41 @@
+.padding-top{
+    padding-top:20px!important;
+}
+.padding-bottom{
+    padding-bottom:20px!important;
+}
+
+.margin-top{
+    margin-top:20px!important;
+}
+.margin-bottom{
+    margin-bottom:20px!important;
+}
+.redColor{
+    color:red!important;
+}
+
+.widthFull{
+    width:100%!important;
+}
+.padding{
+    padding:20px!important;
+}
+.padding_title{
+    padding-top:20px!important;
+    padding-left:18px!important;
+    /* padding-bottom:20px!important; */
+}
+.paddingInfo{
+    padding-top:20px!important;
+    padding-bottom:30px!important;
+}
+.submit_btn{
+    padding-bottom:20px!important;
+}
+.body {
+    scrollbar-width: none
+ }
+.alert-dangerUpd{
+    color:red !important;
+}
